@@ -3,6 +3,7 @@ import UIKit
 import FlipperKit
 #endif
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, RCTBridgeDelegate {
 
