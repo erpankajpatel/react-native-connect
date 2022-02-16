@@ -11,7 +11,8 @@ export const Counter = () => {
   return (
     <View style={styles.container}>
       <Text>You pressed {count} times</Text>
-      <Button onPress={() => {const result = phyllo.initialize('appName', 'token', 'userId', 'dev', '');}} title='Press Me' />
+      <Button onPress={() => {
+        const result = phyllo.initialize('appName', 'token', 'userId', 'dev', '');}} title='Press Me' />
     </View>
   )
 }
