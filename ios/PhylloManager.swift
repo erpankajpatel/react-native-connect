@@ -7,8 +7,7 @@
 
 import Foundation
 import PhylloConnect
-
-var bridgeHelperInstance = PublicBridgeHelper()
+//var bridgeHelperInstance = PublicBridgeHelper()
 var nativeMethodsInstance = PhyConnectModule()
 
 @objc(PhylloManager)
@@ -58,8 +57,8 @@ extension PhylloManager : PhylloConnectDelegate {
       dic["account_id"] = account_id
       dic["work_platform_id"] = work_platform_id
       dic["user_id"] = user_id
-      let __bridge = bridgeHelperInstance.getBridge()
-      __bridge.eventDispatcher().sendAppEvent(withName: "onAccountConnected", body: dic)
+      //let __bridge = bridgeHelperInstance.getBridge()
+      //__bridge.eventDispatcher().sendAppEvent(withName: "onAccountConnected", body: dic)
     }
     
   }
@@ -73,8 +72,8 @@ extension PhylloManager : PhylloConnectDelegate {
       dic["account_id"] = account_id
       dic["work_platform_id"] = work_platform_id
       dic["user_id"] = user_id
-      let __bridge = bridgeHelperInstance.getBridge()
-      __bridge.eventDispatcher().sendAppEvent(withName: "onAccountDisconnected", body: dic)
+     // let __bridge = bridgeHelperInstance.getBridge()
+      //__bridge.eventDispatcher().sendAppEvent(withName: "onAccountDisconnected", body: dic)
     }
   }
   
@@ -85,8 +84,8 @@ extension PhylloManager : PhylloConnectDelegate {
     DispatchQueue.main.async {
       var dic = [String:String]()
       dic["user_id"] = user_id
-      let __bridge = bridgeHelperInstance.getBridge()
-      __bridge.eventDispatcher().sendAppEvent(withName: "onTokenExpired", body: dic)
+      //let __bridge = bridgeHelperInstance.getBridge()
+      //__bridge.eventDispatcher().sendAppEvent(withName: "onTokenExpired", body: dic)
     }
   }
   
@@ -97,8 +96,8 @@ extension PhylloManager : PhylloConnectDelegate {
       var dic = [String:String]()
       dic["user_id"] = user_id
       dic["reason"] = reason
-      let __bridge = bridgeHelperInstance.getBridge()
-      __bridge.eventDispatcher().sendAppEvent(withName: "onExit", body: dic)
+      //let __bridge = bridgeHelperInstance.getBridge()
+      //__bridge.eventDispatcher().sendAppEvent(withName: "onExit", body: dic)
     }
   }
 }
