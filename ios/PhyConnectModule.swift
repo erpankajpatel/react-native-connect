@@ -38,11 +38,7 @@ public class PhyConnectModule: RCTEventEmitter {
   public override func constantsToExport() -> [AnyHashable : Any]! {
     return ["count": 1]
   }
-
-  @objc public override static func requiresMainQueueSetup() -> Bool {
-      return false
-  }
-
+  
   @objc(initialize:::::)
   func initialize(clientDisplayName:String,token:String,userId:String ,environment:String, workPlatformId:String) {
     debugPrint("start initialize ..........")
