@@ -12,14 +12,6 @@ import PhylloConnect
 public var phylloConnectInstance = PhylloManager()  //DeviceManager.swift instance
 var nativeMethodInstance = PhyConnectModule()
 
-var rtcBridge :RCTBridge?
-
-class PublicBridgeHelper {
-    func getBridge () -> RCTBridge {
-    return rtcBridge!
-  }
-}
-
 
 @objc(PhyConnectModule)
 public class PhyConnectModule: RCTEventEmitter {
@@ -38,7 +30,7 @@ public class PhyConnectModule: RCTEventEmitter {
   public override func constantsToExport() -> [AnyHashable : Any]! {
     return ["count": 1]
   }
-  
+
   @objc(initialize:::::)
   func initialize(clientDisplayName:String,token:String,userId:String ,environment:String, workPlatformId:String) {
     debugPrint("start initialize ..........")
