@@ -64,3 +64,7 @@ buck-out/
 
 # Library
 lib/
+
+# examples
+examples/ios/*
+react-native-connect-0.0.1.tgz
