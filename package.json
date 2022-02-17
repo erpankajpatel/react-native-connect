@@ -24,7 +24,8 @@
     "!local.properties",
     "!project.xcworkspace",
     "!xcshareddata",
-    "!xcuserdata"
+    "!xcuserdata",
+    "src/*"
   ],
   "scripts": {
     "compile": "rm -rf lib && tsc -p .",
