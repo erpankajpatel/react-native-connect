@@ -9,6 +9,7 @@
 import Foundation
 import PhylloConnect
 
+
 public var phylloConnectInstance = PhylloManager()  //DeviceManager.swift instance
 var nativeMethodInstance = PhyConnectModule()
 

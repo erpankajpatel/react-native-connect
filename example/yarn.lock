@@ -5697,7 +5697,7 @@
     "nullthrows" "^1.1.1"
 
 "react-native-connect@file:../react-native-connect-0.0.1.tgz":
-  "integrity" "sha512-KCC3TgP3oF/Ik10fPIGs5plssZ81S1jKnmvMvirKoUZ0s0jgwLPHZGpfhMmdfZSuwF1TuSXpX8riH8AjkDRDeA=="
+  "integrity" "sha512-dQ6/qQXOcolbqA5mq+HTKtAz2X28wLjZViPUtFMFfj57RQA3APS9qFaiJnJ1GyJR0iihDmcnJhpAwqFlt/Ssdg=="
   "resolved" "file:../react-native-connect-0.0.1.tgz"
   "version" "0.0.1"
 

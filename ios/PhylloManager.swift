@@ -13,6 +13,11 @@ var nativeMethodsInstance = PhyConnectModule()
 @objc(PhylloManager)
 public class PhylloManager: NSObject {
 
+    
+    var moduleInitialiser : RNModuleInitialiser?
+    var bridge : RCTBridge?
+    
+    
   func PhylloManager() -> PhylloManager {
     return PhylloManager()
   }
@@ -57,7 +62,9 @@ extension PhylloManager : PhylloConnectDelegate {
       dic["account_id"] = account_id
       dic["work_platform_id"] = work_platform_id
       dic["user_id"] = user_id
-      //let __bridge = bridgeHelperInstance.getBridge()
+      // weak var weakSelf = self
+      // weakSelf.sendAppEvent(withName: "onAccountConnected", body: dic)
+      //let __bridge  = bridgeHelperInstance.getBridge()
       //__bridge.eventDispatcher().sendAppEvent(withName: "onAccountConnected", body: dic)
     }
     
@@ -96,8 +103,16 @@ extension PhylloManager : PhylloConnectDelegate {
       var dic = [String:String]()
       dic["user_id"] = user_id
       dic["reason"] = reason
+        self.moduleInitialiser = RNModuleInitialiser()
+        self.bridge = RCTBridge(delegate: self.moduleInitialiser, launchOptions: nil)
+      // self.block = { [weak self] in
+      //       guard let strongSelf = self else { return }
+      //    strongSelf.sendAppEvent(withName: "onExit", body: dic)
+      //   }
+      // weak var weakSelf = self
+      // weakSelf.sendAppEvent(withName: "onExit", body: dic)
       //let __bridge = bridgeHelperInstance.getBridge()
-      //__bridge.eventDispatcher().sendAppEvent(withName: "onExit", body: dic)
+        self.bridge?.eventDispatcher().sendAppEvent(withName: "onExit", body: dic)
     }
   }
 }

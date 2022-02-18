@@ -10,7 +10,7 @@ export default function TesterApp() {
   const [existingUser, setExistingUser] = useState(false)
 
   useEffect(() => {
-    PhylloSDK.addAnEventListener('onTokenExpired', onExitCallBack)
+    PhylloSDK.addAnEventListener('onExit', onExitCallBack)
     return () => {
       PhylloSDK.phylloDisconnect()
     }
