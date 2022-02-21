@@ -31,6 +31,7 @@ class PhylloSDK {
   }
 
   addAnEventListener = (event: TEventType, callback: () => {}) => {
+    console.log('addAnEventListener the phyllo connect')
     const eventListener = this.eventEmitter.addListener(event, callback)
     this.eventListeners.add(eventListener)
   }
